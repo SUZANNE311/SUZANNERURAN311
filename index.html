@@ -1,0 +1,138 @@
+<html>
+<head>
+<link href="asset/css/style.css" rel="stylesheet">
+
+<title>MULTIMEDIA</title>
+</head>
+<body>
+
+<!--- INSERTING VIDEO --->
+<video width="100%" autoplay muted loop>
+<source src="asset/video/intro.mp4" type="video/mp4">
+</video>
+<br><br>
+
+<!--- INSERTING VIDEO --->
+<video controls width="100%">
+<source src="asset/video/trailer_1.mp4" type="video/mp4">
+</video>
+<br><br>
+
+
+<!--- INSERTING AUDIO --->
+<hr>
+<center><H1> UPIN & IPIN SONG </H1>
+<hr>
+<br>
+<audio controls>
+<source src="asset/audio/music_1.mp3" type="audio/mpeg">
+</audio>
+<br><br>
+
+<!--- INSERTING AUDIO 2 --->
+<br>
+<audio controls>
+<source src="asset/audio/music_3.mp3" type="audio/mpeg">
+</audio>
+<br><br>
+
+<!--- INSERTING AUDIO 3 --->
+<br>
+<audio controls>
+<source src="asset/audio/music_4.mp3" type="audio/mpeg">
+</audio>
+<br><br>
+
+<!--- INSERTING AUDIO 4 --->
+<br>
+<audio controls>
+<source src="asset/audio/music_5.mp3" type="audio/mpeg">
+</audio>
+<br><br>
+
+<!--- INSERTING AUDIO 5 --->
+<br>
+<audio controls>
+<source src="asset/audio/music_6.mp3" type="audio/mpeg">
+</audio>
+<br><br>
+
+
+<!--- APPLYING JAVA APPLET --->
+<br>
+<!--- TO CALL THE CSS --->
+<div id="clock"> 8:10:45</div>
+<!--- TO LINK FOR A CURRENT TIME --->
+<script src="clock2.js"></script>
+<br><br>
+
+
+<!--- EMBEDDING VIDEO FROM YOUTUBE 1 --->
+<hr>
+<center><H1> UPIN & IPIN TRAILER </H1>
+<hr>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lD8Z7GpR45U?autoplay=1&mute=1"></iframe>
+<br><br>
+<marquee> 
+ <b>"UPIN & IPIN KERIS SIAMANG TUNGGAL"</b> </marquee> 
+<br><br>
+
+<!--- EMBEDDING VIDEO FROM YOUTUBE 2 --->
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7mfoCnMeCMY?autoplay=1&mute=1"></iframe>
+<br><br>
+<marquee> 
+ <b>"UPIN & IPIN PIN PIN POM NAGA SAKTI"</b> </marquee> 
+<br><br>
+
+<!--- EMBEDDING PDF FILE --->
+<hr>
+<center><b> IMD 311 ASSIGMENT GUIDELINE </b>
+<hr>
+<br>
+<iframe src="asset/pdf/imd311.pdf" width="80%" height="800px">
+</iframe>
+<br><br>
+
+
+<!--- APPLYING MARQUEE --->
+<hr>
+<marquee scrollment="5"> 
+<H1> THANK YOU FOR SCROLLING! <H1></marquee> 
+<hr>
+<br>
+
+
+<script>
+setInterval(showTime, 1000);
+function showTime() {
+	let time = new Date();
+	let hour = time.getHours();
+	let min = time.getMinutes();
+	let sec = time.getSeconds();
+	am_pm = "AM";
+
+	if (hour > 12) {
+		hour -= 12;
+		am_pm = "PM";
+	}
+	if (hour == 0) {
+		hr = 12;
+		am_pm = "AM";
+	}
+
+	hour = hour < 10 ? "0" + hour : hour;
+	min = min < 10 ? "0" + min : min;
+	sec = sec < 10 ? "0" + sec : sec;
+
+	let currentTime = hour + ":"
+			+ min + ":" + sec + am_pm;
+
+	document.getElementById("clock")
+			.innerHTML = currentTime;
+}
+showTime();
+</script>
+</body>
+</html>
